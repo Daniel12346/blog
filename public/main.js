@@ -1,6 +1,10 @@
-const newPost = document.getElementById("newPost");
+const newPostButton = document.getElementById("newPost");
 const form = document.getElementById("form");
+const editButton = document.getElementById("edit");
+const deleteButton = document.getElementById("delete");
 
-newPost.addEventListener("click", () => {
+newPostButton.addEventListener("click", () => {
   form.classList.toggle("hidden");
 });
+
+editButton.addEventListener("click", () => {});
