@@ -14,5 +14,10 @@ deleteButton.addEventListener("click", async function() {
 });
 
 editButton.addEventListener("click", async function() {
-  fetch(`/posts/${this.dataset.id}`, { method: "PATCH" }).then(console.log);
+  const res = await fetch(`/posts/${this.dataset.id}/edit`);
+  //window.location.reload(true);
+  const json = await res.json();
+  console.log(json);
+
+  return json;
 });

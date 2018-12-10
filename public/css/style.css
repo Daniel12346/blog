@@ -424,3 +424,11 @@ textarea {
   background-color: #ffebcc;
   padding: 1rem;
 }
+
+/*to add*/
+.textarea--edit {
+  border: 1px solid blue;
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.4rem;
+}

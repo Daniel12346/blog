@@ -28,6 +28,10 @@ postSchema.methods.urlToPost = function() {
   return `/posts/${this._id}`;
 };
 
+postSchema.methods.urlToPostEdit = function() {
+  return `/posts/${this._id}/edit`;
+};
+
 postSchema.methods.stringId = function() {
   return String(this._id);
 };

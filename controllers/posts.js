@@ -17,13 +17,18 @@ const postController = {
     const post = await Post.findById(id);
     await Post.findByIdAndRemove(id);
     res.redirect("/posts");
-  })
-  /*updatePost: wrap(async (req, res, next) => {
+  }),
+  //responds to patch requests
+
+  displayPostToEdit: wrap(async (req, res, next) => {
     const { id } = req.params;
     const post = await Post.findById(id);
-    await Post.findByIdAndRemove(id);
-    res.redirect("/posts");
-  })*/
+    res.render("post.hbs", {
+      post: post,
+      formattedTime: post.formattedCreationDate(),
+      edit: true
+    });
+  })
 };
 
 module.exports = postController;

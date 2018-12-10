@@ -32,10 +32,10 @@
 
       <div class="post__text p-xs fb-100">
         {{#if edit}}
-        <p class="post__paragraph p mb-xs mr-s ml-s lh-m">
-          {{post.content}}</p>
+        <textarea class="textarea textarea--edit" value={{post.content}}>{{post.content}}</textarea>
         {{else}}
-        <textarea class="textarea" value={{post.content}}>AAAAA</textarea>
+        <p class="post__paragraph p mb-xs mr-s ml-s lh-m"> {{post.content}}
+        </p>
         {{/if}}
 
       </div>
