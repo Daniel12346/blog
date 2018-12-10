@@ -1,0 +1,15 @@
+.header {
+  min-height: 18vh;
+  padding: 1rem;
+  background-color: $color-primary-light;
+  // background-color: $color-white-2;
+  border-bottom: 4px $color-primary solid;
+  &__app-name {
+    text-align: center;
+    color: $color-primary-darker;
+    margin-bottom: 2.5rem;
+  }
+  &__button {
+    box-shadow: $shadow-basic;
+  }
+}

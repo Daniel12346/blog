@@ -1,0 +1,32 @@
+.form {
+  flex-flow: row wrap;
+  padding: 2rem;
+  box-shadow: $shadow-basic;
+  border-radius: 4px;
+  &--new-post {
+    grid-column: 6;
+    @media (min-width: 1000px) {
+      grid-column: 4/10;
+    }
+    background-color: $color-primary-light;
+    & > * {
+      flex-basis: 100%;
+    }
+    .label {
+      background-color: $color-primary-lighter;
+      padding: 0.4rem;
+    }
+    .input {
+      background-color: $color-secondary-lighter;
+    }
+    .input:not(.form__img-upload) {
+      padding: 1rem;
+    }
+
+    .textarea {
+      min-height: 25vh;
+      background-color: $color-secondary-lighter;
+      padding: 1rem;
+    }
+  }
+}

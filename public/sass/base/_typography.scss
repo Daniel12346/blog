@@ -1,0 +1,44 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.heading {
+  font-family: "Lato", serif;
+  font-weight: 600;
+
+  &--primary {
+    font-size: 4rem;
+    font-weight: 600;
+  }
+  &--secondary {
+    font-weight: 700;
+    font-size: 1.4rem;
+  }
+  &--tertiary {
+    font-size: 1.4rem;
+  }
+}
+
+.p {
+  line-height: 1.7rem;
+  font-size: 1.25rem;
+  color: $text-color-1;
+}
+
+.info--secondary {
+  font-weight: 500;
+  color: $color-grey-dark-3;
+}
+
+.button__text {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.form {
+  .input {
+    font-size: 1.1rem;
+  }
+}

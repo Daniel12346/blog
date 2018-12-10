@@ -1,0 +1,107 @@
+//margins
+
+//bottom
+.mb-xs {
+  margin-bottom: 0.5rem;
+}
+
+.mb-s {
+  margin-bottom: 1rem;
+}
+
+.mb-m {
+  margin-bottom: 4rem;
+}
+
+.mb-l {
+  margin-bottom: 8rem;
+}
+
+//top
+.mt-s {
+  margin-top: 1rem;
+}
+
+.mt-m {
+  margin-top: 4rem;
+}
+
+.mt-l {
+  margin-top: 8rem;
+}
+
+.mt-xs {
+  margin-top: 0.5rem;
+}
+
+//right
+.mr-s {
+  margin-right: 1rem;
+}
+
+.mr-m {
+  margin-right: 4rem;
+}
+
+.mr-l {
+  margin-right: 8rem;
+}
+
+.mr-xs {
+  margin-left: 0.5rem;
+}
+
+//left
+.ml-s {
+  margin-left: 1rem;
+}
+
+.ml-m {
+  margin-left: 4rem;
+}
+
+.ml-l {
+  margin-left: 8rem;
+}
+
+.ml-xs {
+  margin-left: 0.5rem;
+}
+//flexbox
+
+.flex {
+  display: flex;
+  flex-flow: row wrap;
+  //center children/content
+  &-cc {
+    justify-content: center;
+    align-items: center;
+  }
+  &-sa {
+    justify-content: space-around;
+  }
+
+  &-sb {
+    justify-content: space-between;
+  }
+
+  &-fe {
+    justify-content: flex-end;
+  }
+  &-fs {
+    justify-content: flex-start;
+  }
+}
+
+.fb-50 {
+  flex: 1 0 50%;
+}
+
+.fb-100 {
+  flex: 1 0 100%;
+}
+
+//other
+.hidden {
+  display: none;
+}

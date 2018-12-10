@@ -1,0 +1,47 @@
+//COLORS
+
+//primary color
+
+$color-primary: rgba(100, 162, 255, 1);
+
+$h-primary: hue($color-primary);
+$s: saturation($color-primary);
+$l: lightness($color-primary);
+
+$color-primary-light: hsla($h-primary, $s, 70%, 1);
+$color-primary-lighter: hsla($h-primary, $s, 90%, 1);
+
+$color-primary-dark: hsla($h-primary, $s, 30%, 1);
+$color-primary-darker: hsla($h-primary, $s, 10%, 1);
+
+//secondary color
+$h-secondary: $h-primary + 180;
+
+$color-secondary: hsla($h-secondary, $s, $l, 1);
+
+$color-secondary-light: hsla($h-secondary, $s, 70%, 1);
+$color-secondary-dark: hsla($h-secondary, $s, 30%, 1);
+
+$color-secondary-lighter: hsla($h-secondary, $s, 90%, 1);
+$color-secondary-darker: hsla($h-secondary, $s, 10%, 1);
+
+$color-primary-lightest: hsla($h-primary, $s, 95%, 0.8);
+$color-secondary-lightest: hsla($h-secondary, $s, 95%, 0.8);
+//other colors
+$color-grey-dark-1: #777;
+$color-grey-dark-2: hsla(0, 3%, 30%, 1);
+$color-grey-dark-3: hsla(0, 3%, 50%, 1);
+
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: hsla(0, 0, 90%, 1);
+
+$color-white-1: hsla(0, 0, 92%, 1);
+$color-white-2: hsla(0, 10, 92%, 1);
+$color-white-3: hsla(0, 20, 92%, 1);
+$color-white-4: hsla(0, 30, 92%, 1);
+
+$text-color-1: #292626d5;
+//testing
+
+//box-shadow
+$shadow-basic: 0 0.2rem 1rem rgba(0, 0, 0, 0.3);

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link href="/css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous" />
+  <title>Blog</title>
+</head>
+
+<body>
+  <header class="header flex flex-cc mb-m">
+    <h1 class="header__app-name heading heading--primary fb-100">BLOG</h1>
+    <div class="flex flex-cc">
+      <a class="header__button button button--new-post">
+        <i class="fa fa-plus icon button__icon"></i><span class="button__text" id="newPost">Create a new post</span>
+      </a>
+    </div>
+  </header>
+  <section class="posts grid--12 mb-l flex-cc">
+    <form class="form form--new-post mb-m flex flex-cc hidden" id="form" method="POST" action="/" enctype="multipart/form-data">
+      <label for="img" class="label">Choose a nice image</label>
+      <input type="file" name="img" class="input form__img-upload" />
+      <label for="title" class="label">Title</label>
+      <input type="text" name="title" class="input form__title" required="true" placeholder="Title..." />
+      <label for="content" class="label">Write Something</label>
+      <textarea name="content" class="textarea form__content" required="true" placeholder="..."></textarea>
+      <button type="submit" class="button">Submit</button>
+    </form>
+    {{#each posts}}
+
+    <article class="post mb-m">
+      <div class="post__info flex flex-sb mb-s ">
+        <span class="post__author info--secondary mr-s">Daniel V.</span>
+        <span class="post__date info--secondary">{{this.timeSinceCreation}}</span>
+      </div>
+      <a class="a post__link url" href={{this.urlToPost}}>
+        <div class="post__img-container img-container flex flex-cc mb-s">
+          <img class="img post__img" class="test__penguin" src={{this.imgUrl}} />
+        </div>
+        <h3 class="post__title heading heading--secondary mb-xs">
+          {{this.title}}
+        </h3>
+      </a>
+      <div class="post__text">
+        <p class="post__paragraph p mb-xs">
+          {{this.truncatedContent}}
+        </p>
+        <div class="post__actions">
+          <a href={{this.urlToPost}} class=" post__read-more a flex flex-fs">Read more</a>
+          <a class="a post__link"><i class="icon fas fa-trash-alt "></i></a>
+          <a class="a post__link"><i class="icon fas fa-pen "></i></a>
+        </div>
+      </div>
+    </article>
+
+    {{/each}}
+  </section>
+  {{> footer}}
+  <script src="main.js"></script>
+</body>
+
+</html>
