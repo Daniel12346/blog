@@ -7,4 +7,12 @@ newPostButton.addEventListener("click", () => {
   form.classList.toggle("hidden");
 });
 
-editButton.addEventListener("click", () => {});
+deleteButton.addEventListener("click", async function() {
+  await fetch(`/posts/${this.dataset.id}`, { method: "DELETE" });
+  window.location.reload(true);
+  return;
+});
+
+editButton.addEventListener("click", async function() {
+  fetch(`/posts/${this.dataset.id}`, { method: "PATCH" }).then(console.log);
+});

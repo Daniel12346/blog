@@ -18,6 +18,12 @@ const postController = {
     await Post.findByIdAndRemove(id);
     res.redirect("/posts");
   })
+  /*updatePost: wrap(async (req, res, next) => {
+    const { id } = req.params;
+    const post = await Post.findById(id);
+    await Post.findByIdAndRemove(id);
+    res.redirect("/posts");
+  })*/
 };
 
 module.exports = postController;

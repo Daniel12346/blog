@@ -348,6 +348,7 @@ textarea {
 }
 .post__actions .post__link {
   margin: 0 1.5rem;
+  padding: 0.5rem;
   font-size: 1.4rem;
   color: #777;
   transition: all 0.1s;
@@ -357,8 +358,7 @@ textarea {
   color: #003d99;
 }
 .post__actions .post__link:active {
-  transform: translateY(20px);
-  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.3);
+  transform: translateY(2px);
 }
 
 .button {

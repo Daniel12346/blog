@@ -28,5 +28,9 @@ postSchema.methods.urlToPost = function() {
   return `/posts/${this._id}`;
 };
 
+postSchema.methods.stringId = function() {
+  return String(this._id);
+};
+
 const Post = mongoose.model("Post", postSchema);
 module.exports = Post;
