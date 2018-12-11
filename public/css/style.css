@@ -31,6 +31,10 @@ body {
   color: #837c7c;
 }
 
+.button--edit {
+  max-width: 20rem;
+}
+
 .button__text {
   font-weight: 500;
   font-size: 1.2rem;
@@ -267,6 +271,17 @@ textarea {
   resize: none;
 }
 
+.textarea--edit {
+  border-radius: 3px;
+  border: #66a3ff 2px solid;
+  width: 100%;
+  max-width: 50rem;
+  min-height: 30rem;
+  padding: 1rem;
+  font-size: 1.4rem;
+  background-color: #ffebcc;
+}
+
 .img {
   min-width: 25rem;
   width: 100%;
@@ -423,12 +438,4 @@ textarea {
   min-height: 25vh;
   background-color: #ffebcc;
   padding: 1rem;
-}
-
-/*to add*/
-.textarea--edit {
-  border: 1px solid blue;
-  width: 100%;
-  padding: 2rem;
-  font-size: 1.4rem;
 }

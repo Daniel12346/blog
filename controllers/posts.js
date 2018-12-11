@@ -9,7 +9,8 @@ const postController = {
     const post = await Post.findById(id);
     res.render("post.hbs", {
       post: post,
-      formattedTime: post.formattedCreationDate()
+      formattedTime: post.formattedCreationDate(),
+      urlToPost: post.urlToPost()
     });
   }),
   deletePost: wrap(async (req, res, next) => {
@@ -18,7 +19,6 @@ const postController = {
     await Post.findByIdAndRemove(id);
     res.redirect("/posts");
   }),
-  //responds to patch requests
 
   displayPostToEdit: wrap(async (req, res, next) => {
     const { id } = req.params;
@@ -26,8 +26,15 @@ const postController = {
     res.render("post.hbs", {
       post: post,
       formattedTime: post.formattedCreationDate(),
+      urlToPost: post.urlToPost(),
       edit: true
     });
+  }),
+  displayEditedPost: wrap(async (req, res, next) => {
+    const { updatedContent } = req.body;
+    const { id } = req.params;
+    const post = await postServices.updatePost(id, { content: updatedContent });
+    res.redirect(post.urlToPost());
   })
 };
 

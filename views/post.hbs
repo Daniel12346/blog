@@ -31,8 +31,13 @@
       </div>
 
       <div class="post__text p-xs fb-100">
+
         {{#if edit}}
-        <textarea class="textarea textarea--edit" value={{post.content}}>{{post.content}}</textarea>
+        <form class="flex flex-cc" action={{urlToPost}} method="post" />
+        <textarea class="textarea textarea--edit mb-xs fb-100" name="updatedContent" value={{post.content}}>{{post.content}}</textarea>
+        <button class="button button--edit fb-100" type="submit">Save changes</button>
+        </form>
+
         {{else}}
         <p class="post__paragraph p mb-xs mr-s ml-s lh-m"> {{post.content}}
         </p>
