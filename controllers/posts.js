@@ -1,7 +1,6 @@
 const Post = require("../models/post");
 const postServices = require("../services/post");
 const { wrap } = require("../utils/utils");
-const { ObjectId } = require("mongoose").Types;
 
 const postController = {
   displayPost: wrap(async (req, res, next) => {

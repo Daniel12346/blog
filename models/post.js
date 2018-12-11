@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const shortid = require("shortid");
 const moment = require("moment");
 const { truncateText } = require("../utils/utils");
 
@@ -8,8 +7,6 @@ const postSchema = new mongoose.Schema({
   imgUrl: { type: String },
   content: { type: String, required: true },
   creationDate: { type: Date, default: new Date() }
-  //TODO: decide if I need the short id
-  //id: { type: String, required: true, default: shortid.generate() }
 });
 
 postSchema.methods.timeSinceCreation = function() {
@@ -20,6 +17,7 @@ postSchema.methods.formattedCreationDate = function() {
   return moment(this.creationDate).format("MMMM D,    h:m a");
 };
 
+//returns the shortened text with an added ellipsis
 postSchema.methods.truncatedContent = function() {
   return truncateText(this.content, 15);
 };

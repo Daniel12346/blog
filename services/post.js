@@ -1,3 +1,5 @@
+//short functions returning promises used in the post controller
+
 const Post = require("../models/post");
 
 const userServices = {

@@ -44,6 +44,8 @@ app.use(express.urlencoded({ extended: false }));
 //TODO: multer should not be used globally
 app.use(multer({ storage: fileStorage, fileFilter: fileFilter }).single("img"));
 app.use(cookieParser());
+
+//TODO: fix path
 app.use(
   sassMiddleware({
     src: path.join(__dirname, "public", "sass"),
@@ -56,11 +58,14 @@ app.use("/images", express.static(path.join(__dirname, "images")));
 
 //route handling
 routeAll(app);
-/*
-// catch 404 and forward to error handler
+
+/*TODO: add error handling
+
+//catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
+
 
 // error handler
 app.use(function(err, req, res, next) {
